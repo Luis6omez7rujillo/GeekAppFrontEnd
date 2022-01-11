@@ -1,0 +1,51 @@
+ <!-- Form Section -->
+
+ <form [formGroup]="fgValidador" (ngSubmit)="Restablecer()"> <!-- Change The Form Method From Here-->
+    <div class="card-panel z-depth-5">
+
+        <!-- Form Logo Section  -->
+
+        <div class="row margin">
+            <div class="col s12 m12 l12 center">
+                <img src="https://i.imgur.com/ypAbAYt.png"
+                 alt="" class="responsive-img circle" style="width:100px;">
+                <p>APLICACIÓN PEDIDOS-Recuperación de Contraseña</p>
+            </div>
+        </div>
+
+        <!-- Form Username Input Section -->
+
+        <div class="col s12 m12 l12">
+            <div class="input-field">
+                <i class="material-icons prefix">person</i>
+                <input formControlName='correo' type="email" name="correo" id="correo">
+                <label for="correo">Correo electrónico</label>
+            </div>
+        </div>
+
+        
+          
+            <!-- Form Button Section  -->
+
+        <div class="center">
+             <!--
+            <input  [disabled]="!fgValidador.valid" type="submit" value="Ingresar" name="login" 
+            class="btn waves-effect waves-light " 
+            style="width:100%; background-color: #ff4081;">   
+             -->
+
+            <button [disabled]="!fgValidador.valid" type='submit' name='btn_login' class="btn waves-effect waves-light ">
+                Enviar
+                <i class="material-icons right">send</i>
+            </button>
+
+        </div>
+
+            <!-- Form "Register Now" And "Forgot Password" Link Section. -->
+
+        <div class="" style="font-size:14px;"><br>
+            <a routerLink="/administracion/crear-persona" class="left">Registrarse!</a>
+            
+        </div><br>
+    </div>
+</form>
